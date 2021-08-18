@@ -6,9 +6,11 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.6.3-stretch-node
-    executor: ruby/default
+    working_directoy: ~/repo
+
     steps:
       - checkout
+      
       - run:
           name: install dependencies
           command: |
